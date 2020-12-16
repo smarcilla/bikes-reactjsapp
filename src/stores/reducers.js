@@ -200,6 +200,8 @@ export const getFormatedScore = (fn) => (score) => {
   return sortedScore.map((s) => ({
     name: s.name,
     number: s.number,
-    time: new Date(s.time - firstPlayer.time).toLocaleTimeString(),
+    time: new Date(
+      s.time - firstPlayer.time - 60 * 60 * 1000
+    ).toLocaleTimeString(),
   }));
 };
