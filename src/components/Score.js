@@ -11,14 +11,14 @@ const Score = ({ title, data }) => (
       <div className="col-3">{TIME_CYCLIST}</div>
     </div>
     {data.map((d, index) => (
-      <div className="row">
-        <div key={index} className="col-6">
+      <div className="row" key={index}>
+        <div key={`${index}-1`} className="col-6">
           {d.name}
         </div>
-        <div key={index} className="col-2">
+        <div key={`${index}-2`} className="col-2">
           {d.number}
         </div>
-        <div key={index} className="col-3">
+        <div key={`${index}-3`} className="col-3">
           {d.time}
         </div>
       </div>
