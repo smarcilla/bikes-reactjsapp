@@ -1,6 +1,6 @@
 const getPlayers = () => [
   {
-    name: "Seth Kuss",
+    name: "Sepp Kuss",
     number: 12,
     power: 64 * 1000,
   },
@@ -172,8 +172,34 @@ const getPlayers = () => [
   {
     name: "Eddy Merckx",
     number: 62,
-    power: 50 * 1000,
+    power: 54 * 1000,
   },
+  {
+    name: "Felix Großschartner",
+    number: 101,
+    power: 64 * 1000,
+  },
+  {
+    name: "Rafał Majka",
+    number: 102,
+    power: 70 * 1000,
+  },
+  {
+    name: "Vincenzo Nibali",
+    number: 111,
+    power: 59 * 1000,
+  },
+  {
+    name: "Wout Poels",
+    number: 72,
+    power: 63 * 1000,
+  },
+  {
+    name: "David Gaudu",
+    number: 52,
+    power: 63 * 1000,
+  },
+
   //
 ];
 
