@@ -39,19 +39,19 @@ const Screen = ({
   };
 
   return (
-    <div className="container">
+    <div className="container bg-dark">
       <div className="row">
-        <div class="btn-group" role="group" aria-label="Basic example">
+        <div className="btn-group" role="group" aria-label="Basic example">
           <button
             type="button"
-            class="btn btn-primary"
+            className="btn btn-primary"
             onClick={() => playAction()}
           >
             {playBtn}
           </button>
           <button
             type="button"
-            class="btn btn-primary"
+            className="btn btn-primary"
             onClick={() => startRaceAction()}
           >
             {startRaceBtn}
