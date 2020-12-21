@@ -1,5 +1,3 @@
-import { useState } from "react";
-
 import Score from "./Score";
 
 import {
@@ -10,19 +8,20 @@ import {
   createScore,
 } from "../stores/reducers";
 
-const INITIAL_STATE = 0;
-const TOTAL_STATE = 21;
-
 const Screen = ({
   playBtn,
   startRaceBtn,
   currentStageTitle,
   totalStageTitle,
+  currentStage,
+  currentScore,
+  totalScore,
+  setCurrentScore,
+  setCurrentStage,
+  setTotalScore,
+  INITIAL_STATE,
+  TOTAL_STATE,
 }) => {
-  const [currentScore, setCurrentScore] = useState(createScore());
-  const [totalScore, setTotalScore] = useState(createScore());
-  const [currentStage, setCurrentStage] = useState(INITIAL_STATE);
-
   const playAction = () => {
     if (currentStage < TOTAL_STATE) {
       const cs = calculateScore(currentScore);
@@ -35,7 +34,7 @@ const Screen = ({
   const startRaceAction = () => {
     setCurrentScore(createScore());
     setTotalScore(createScore());
-    setCurrentStage(1);
+    setCurrentStage(INITIAL_STATE);
   };
 
   return (

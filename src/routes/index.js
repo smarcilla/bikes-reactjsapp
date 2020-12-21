@@ -3,11 +3,15 @@ import { Switch, Route } from "react-router-dom";
 import MainScorePage from "../pages/MainScorePage";
 import TeamPage from "../pages/TeamPage";
 
-const Routes = () => (
+const Routes = (props) => (
   <Switch>
-    <Route path="/" exact component={MainScorePage} />
-    <Route path="/teams" component={TeamPage} />
-    <Route component={MainScorePage} />
+    <Route
+      path="/"
+      exact
+      render={(p) => <MainScorePage {...{ ...p, ...props }} />}
+    />
+    <Route path="/teams" render={(p) => <TeamPage {...{ ...p, ...props }} />} />
+    <Route render={(p) => <MainScorePage {...{ ...p, ...props }} />} />
   </Switch>
 );
 export default Routes;

@@ -1,4 +1,4 @@
-const getPlayers = () => [
+export const getPlayers = () => [
   {
     name: "Sepp Kuss",
     number: 12,
@@ -230,4 +230,14 @@ export const getFormatedScore = (fn) => (score) => {
       s.time - firstPlayer.time - 60 * 60 * 1000
     ).toLocaleTimeString(),
   }));
+};
+
+export const calculateFormatedDate = (sortFn, score) => (playerTime) => {
+  const sortedScore = sortFn(score);
+  const firstPlayer = sortedScore[0];
+
+  const d = new Date(playerTime - firstPlayer.time - 60 * 60 * 1000);
+  const time = d.getHours() * 60 * 60 + d.getMinutes() * 60 + d.getSeconds();
+
+  return { formated: d.toLocaleTimeString(), time };
 };
