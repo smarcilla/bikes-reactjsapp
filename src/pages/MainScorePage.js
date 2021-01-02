@@ -7,6 +7,6 @@ const pageProps = {
   totalStageTitle: "Clasificacion General ",
 };
 
-const MainScorePage = () => <Screen {...pageProps} />;
+const MainScorePage = (props) => <Screen {...{ ...pageProps, ...props }} />;
 
 export default MainScorePage;
