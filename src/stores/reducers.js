@@ -199,14 +199,43 @@ export const getPlayers = () => [
     number: 52,
     power: 63 * 1000,
   },
-
+  {
+    name: "Sam Bennet",
+    number: 63,
+    power: 70 * 1000,
+  },
+  {
+    name: "Gorge Bennet",
+    number: 15,
+    power: 68 * 1000,
+  },
+  {
+    name: "Roberto Heras",
+    number: 85,
+    power: 65 * 1000,
+  },
+  {
+    name: "Gorka Izaguirre",
+    number: 86,
+    power: 67 * 1000,
+  },
+  {
+    name: "Marco Pantani",
+    number: 112,
+    power: 64 * 1000,
+  },
   //
 ];
 
 export const createScore = () => getPlayers().map((p) => ({ ...p, time: 0 }));
 
-export const calculateScore = (score) =>
-  score.map((s) => ({ ...s, time: Math.floor(Math.random() * s.power) + 1 }));
+export const calculateScore = (score) => {
+  const stageDifficulty = Math.floor(Math.random() * 15);
+  return score.map((s) => ({
+    ...s,
+    time: stageDifficulty * (Math.floor(Math.random() * s.power) + 1),
+  }));
+};
 
 export const mergeScores = (totalScore, newScore) =>
   totalScore.reduce(
