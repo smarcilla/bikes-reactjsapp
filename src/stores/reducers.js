@@ -224,6 +224,26 @@ export const getPlayers = () => [
     number: 112,
     power: 64 * 1000,
   },
+  {
+    name: "Pello Bilbao",
+    number: 73,
+    power: 68 * 1000,
+  },
+  {
+    name: "Iban Mayo",
+    number: 121,
+    power: 67 * 1000,
+  },
+  {
+    name: "Nelson Filippe Oliveira",
+    number: 37,
+    power: 71 * 1000,
+  },
+  {
+    name: "Imanol Erviti",
+    number: 38,
+    power: 70 * 1000,
+  },
   //
 ];
 
