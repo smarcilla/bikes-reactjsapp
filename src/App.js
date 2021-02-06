@@ -18,14 +18,14 @@ const tabItems = [
   },
 ];
 
-const INITIAL_STATE = 0;
-const TOTAL_STATE = 21;
+const INITIAL_STAGE = 0;
+const TOTAL_STAGE = 100;
 
 function App() {
   const [navSelected, setNavSelect] = useState(tabItems[0].id);
   const [currentScore, setCurrentScore] = useState(createScore());
   const [totalScore, setTotalScore] = useState(createScore());
-  const [currentStage, setCurrentStage] = useState(INITIAL_STATE);
+  const [currentStage, setCurrentStage] = useState(INITIAL_STAGE);
 
   const [sergioTeam, setSergioTeam] = useState({
     currentScore: [],
@@ -54,8 +54,8 @@ function App() {
             setTotalScore,
             currentStage,
             setCurrentStage,
-            INITIAL_STATE,
-            TOTAL_STATE,
+            INITIAL_STATE: INITIAL_STAGE,
+            TOTAL_STATE: TOTAL_STAGE,
             sergioTeam,
             setSergioTeam,
             papiTeam,

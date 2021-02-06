@@ -244,6 +244,31 @@ export const getPlayers = () => [
     number: 38,
     power: 70 * 1000,
   },
+  {
+    name: "Remco Evenepoel",
+    number: 64,
+    power: 63 * 1000,
+  },
+  {
+    name: "Alberto Contador",
+    number: 87,
+    power: 58 * 1000,
+  },
+  {
+    name: "Pavel Tonkov",
+    number: 65,
+    power: 62 * 1000,
+  },
+  {
+    name: "Jan Ullrich",
+    number: 131,
+    power: 60 * 1000,
+  },
+  {
+    name: "Remi Cavagna",
+    number: 66,
+    power: 77 * 1000,
+  },
   //
 ];
 
